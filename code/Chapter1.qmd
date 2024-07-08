@@ -1,0 +1,6 @@
+---
+title: Chapter 1
+format: gfm
+---
+
+I skipped it, as recommended in the Book for more expierenced R users
