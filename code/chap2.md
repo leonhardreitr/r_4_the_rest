@@ -51,7 +51,6 @@ glimpse(d)
     $ gdpPercap <dbl> 779.4453, 820.8530, 853.1007, 836.1971, 739.9811, 786.1134, …
 
 ``` r
-#p <- 
 d |> 
 ggplot(
     aes(
@@ -59,7 +58,35 @@ ggplot(
         y = lifeExp
     )
 ) +
-    geom_line(col = "#FF00FF")
+    geom_line(col = "#FF00FF") +
+    geom_point(col = "#800080")
 ```
 
 ![](chap2_files/figure-commonmark/unnamed-chunk-2-1.png)
+
+``` r
+d |> 
+ggplot(
+    aes(
+        x = year,
+        y = lifeExp,
+        fill = year
+    )
+) +
+    geom_col() +
+    scale_fill_viridis_c() + theme_few()
+```
+
+![](chap2_files/figure-commonmark/unnamed-chunk-2-2.png)
+
+``` r
+excel_pal()(9)
+```
+
+    Warning: This manual palette can handle a maximum of 7 values. You have
+    supplied 9
+
+    [1] "#FF00FF" "#FFFF00" "#00FFFF" "#800080" "#800000" "#008080" "#0000FF"
+    [8] NA        NA       
+
+Honestly nothing new to me so I will skip this Chapter
